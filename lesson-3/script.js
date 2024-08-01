@@ -53,3 +53,18 @@ switch (dayNum) {
 document.querySelector('#day').innerHTML = `День тижня - ${day}`
 
 
+// Task-3
+
+document.querySelector("#checkYear").onclick = function () {
+    let yearInput = document.getElementById("year").value;
+    isLeapYear(yearInput)
+  };
+
+  function isLeapYear(year) {
+    let yearOutput = document.querySelector("#yearOutput");
+    if ((year%4==0 && year%100!=0) || year%400==0 ) {
+        yearOutput.innerHTML = `рік ${year} - високосний`;
+    } else {
+        yearOutput.innerHTML = `рік ${year} - невисокосний`;
+    }
+  }
